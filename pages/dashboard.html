@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#071f3d">
+    <title>Dashboard | APSTI Inventario</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body class="dashboard-page">
+    <div class="app-shell">
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand"><img src="../img/logo.png" alt="APSTI Inventario"><button class="sidebar-close" id="sidebarClose" type="button" aria-label="Cerrar menú">×</button></div>
+            <nav class="sidebar-menu" aria-label="Navegación principal">
+                <a href="dashboard.html" class="nav-link active"><span class="nav-icon">⌂</span><span>Dashboard</span></a>
+                <p class="menu-title">Inventario</p>
+                <a href="laboratorios.html" class="nav-link"><span class="nav-icon">▦</span><span>Laboratorios</span></a>
+                <a href="taller-mantenimiento.html" class="nav-link"><span class="nav-icon">⚒</span><span>Taller de mantenimiento</span></a>
+                <a href="equipos-computo.html" class="nav-link"><span class="nav-icon">▰</span><span>Equipos de cómputo</span></a>
+                <a href="herramientas.html" class="nav-link"><span class="nav-icon">⌕</span><span>Herramientas</span></a>
+                <a href="componentes.html" class="nav-link"><span class="nav-icon">◇</span><span>Componentes</span></a>
+                <a href="periféricos.html" class="nav-link"><span class="nav-icon">◉</span><span>Periféricos</span></a>
+                <a href="redes.html" class="nav-link"><span class="nav-icon">⌁</span><span>Redes</span></a>
+                <a href="software.html" class="nav-link"><span class="nav-icon">⬡</span><span>Software</span></a>
+                <a href="mobiliario.html" class="nav-link"><span class="nav-icon">▤</span><span>Mobiliario</span></a>
+                <p class="menu-title">Gestión</p>
+                <a href="prestamos.html" class="nav-link"><span class="nav-icon">⇄</span><span>Préstamos</span></a>
+                <a href="mantenimiento.html" class="nav-link"><span class="nav-icon">⚙</span><span>Mantenimiento</span></a>
+                <a href="bajas.html" class="nav-link"><span class="nav-icon">↓</span><span>Bajas</span></a>
+                <a href="movimientos.html" class="nav-link"><span class="nav-icon">↕</span><span>Movimientos</span></a>
+                <a href="proveedores.html" class="nav-link"><span class="nav-icon">▱</span><span>Proveedores</span></a>
+                <p class="menu-title">Administración</p>
+                <a href="usuarios.html" class="nav-link"><span class="nav-icon">♙</span><span>Usuarios</span></a>
+                <a href="reportes.html" class="nav-link"><span class="nav-icon">▥</span><span>Reportes</span></a>
+            </nav>
+            <div class="sidebar-footer"><a href="../index.html" class="nav-link logout"><span class="nav-icon">↪</span><span>Cerrar sesión</span></a></div>
+        </aside>
+        <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+        <main class="main-content">
+            <header class="topbar">
+                <div class="topbar-title"><button class="menu-toggle" id="menuToggle" type="button" aria-label="Abrir menú">☰</button><div><p class="breadcrumb">Panel principal</p><h1>Dashboard</h1></div></div>
+                <div class="topbar-actions"><button class="icon-button notification-button" type="button" aria-label="Notificaciones"><span>♢</span><i></i></button><div class="user-profile"><div class="avatar">AD</div><div><strong>Administrador</strong><span>Usuario principal</span></div></div></div>
+            </header>
+            <div class="content-wrap">
+                <section class="welcome-banner">
+                    <div><p id="currentDate">Resumen del inventario</p><h2>Buenos días, Administrador</h2><span>Aquí tienes una vista general del estado de los recursos.</span></div>
+                    <a class="btn-secondary" href="movimientos.html">+ Registrar movimiento</a>
+                </section>
+                <section class="stats-grid" aria-label="Estadísticas generales">
+                    <article class="stat-card stat-blue"><div class="stat-icon">▣</div><div class="stat-copy"><p>Productos registrados</p><strong id="totalProductos">248</strong><span class="trend positive">↑ 8 este mes</span></div></article>
+                    <article class="stat-card stat-cyan"><div class="stat-icon">▦</div><div class="stat-copy"><p>Laboratorios</p><strong id="totalLaboratorios">6</strong><span>Todos operativos</span></div></article>
+                    <article class="stat-card stat-orange"><div class="stat-icon">!</div><div class="stat-copy"><p>Stock bajo</p><strong id="stockBajo">12</strong><span class="trend warning">Requieren atención</span></div></article>
+                    <article class="stat-card stat-purple"><div class="stat-icon">⚙</div><div class="stat-copy"><p>En mantenimiento</p><strong id="enMantenimiento">5</strong><span>2 próximos a finalizar</span></div></article>
+                </section>
+                <section class="dashboard-grid">
+                    <article class="panel category-panel">
+                        <div class="panel-header"><div><h2>Inventario por categoría</h2><p>Distribución actual de recursos</p></div><a href="reportes.html">Ver reporte →</a></div>
+                        <div class="category-list" id="categorySummary">
+                            <div class="category-item"><div class="category-meta"><span>Equipos de cómputo</span><strong>96</strong></div><div class="progress"><i style="width:82%"></i></div></div>
+                            <div class="category-item"><div class="category-meta"><span>Componentes</span><strong>64</strong></div><div class="progress"><i style="width:65%"></i></div></div>
+                            <div class="category-item"><div class="category-meta"><span>Periféricos</span><strong>48</strong></div><div class="progress"><i style="width:48%"></i></div></div>
+                            <div class="category-item"><div class="category-meta"><span>Herramientas</span><strong>27</strong></div><div class="progress"><i style="width:32%"></i></div></div>
+                            <div class="category-item"><div class="category-meta"><span>Mobiliario</span><strong>13</strong></div><div class="progress"><i style="width:18%"></i></div></div>
+                        </div>
+                    </article>
+                    <article class="panel movements-panel">
+                        <div class="panel-header"><div><h2>Movimientos recientes</h2><p>Últimas actualizaciones registradas</p></div><a href="movimientos.html">Ver todos →</a></div>
+                        <div class="movement-list" id="recentMovements">
+                            <div class="movement-item"><span class="movement-icon entry">↓</span><div><strong>Ingreso de 8 teclados</strong><p>Equipos de cómputo · Hace 12 min</p></div><span class="status-badge green">Ingreso</span></div>
+                            <div class="movement-item"><span class="movement-icon loan">⇄</span><div><strong>Préstamo de proyector</strong><p>Laboratorio 03 · Hace 1 h</p></div><span class="status-badge blue">Préstamo</span></div>
+                            <div class="movement-item"><span class="movement-icon service">⚙</span><div><strong>Laptop enviada a revisión</strong><p>Taller · Hace 3 h</p></div><span class="status-badge orange">Mantenimiento</span></div>
+                            <div class="movement-item"><span class="movement-icon return">↑</span><div><strong>Devolución de herramientas</strong><p>Taller · Ayer, 16:42</p></div><span class="status-badge gray">Devolución</span></div>
+                        </div>
+                    </article>
+                </section>
+                <footer class="dashboard-footer"><span>APSTI Inventario · 2026</span><span>I.E.S.T.P. Contralmirante Manuel Villar Olivera</span></footer>
+            </div>
+        </main>
+    </div>
+    <script src="../js/app.js"></script><script src="../js/dashboard.js"></script>
+</body>
+</html>
